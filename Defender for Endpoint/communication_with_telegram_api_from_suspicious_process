@@ -10,7 +10,7 @@ Telegram has constantly been the subject of abuse by multiple threat actors, fav
 
 ## Query
 
-### Sentinel
+### Defender for Endpoint
 
 ```
 (DeviceProcessEvents
