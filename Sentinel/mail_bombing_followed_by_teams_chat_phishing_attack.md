@@ -94,7 +94,7 @@ EmailEvents
 ## Author
 - Name: Stamatis Chatzimangou
 - Github: https://github.com/st0pp3r
-- X: [`https://x.com/_st0pp3r_`](https://x.com/_st0pp3r_)
+- X: [https://x.com/\_st0pp3r\_](https://x.com/_st0pp3r_)
 - LinkedIn: https://www.linkedin.com/in/stamatis-chatzimangou/
 
 ## Version History
