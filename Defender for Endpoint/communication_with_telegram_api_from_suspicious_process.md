@@ -1,4 +1,4 @@
-# Communication with Telegram API from suspicious process
+# Communication with Telegram API from Suspicious Process
 
 ## Description
 
