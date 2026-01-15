@@ -12,7 +12,7 @@ Telegram has constantly been the subject of abuse by multiple threat actors, fav
 
 ### Defender for Endpoint
 
-```
+```KQL
 (DeviceProcessEvents
 | where FileName in ("cmd.exe", "curl.exe", "powershell.exe", "pwsh.exe")
 | where ProcessCommandLine contains "api.telegram.org"

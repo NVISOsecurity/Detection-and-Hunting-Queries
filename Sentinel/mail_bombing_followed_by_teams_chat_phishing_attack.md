@@ -1,4 +1,4 @@
-# Mail Bombing followed by Teams Chat Phishing Attack
+# Mail Bombing Followed by Teams Chat Phishing Attack
 
 ## Description
 
@@ -13,7 +13,7 @@ Adversaries first bomb a user's mailbox with spam emails and then pose as Help D
 
 ### Sentinel
 
-```
+```KQL
 // Set the threshold for identifying a high number of bad emails and the time window for chat creation
 let bad_email_threshold = 100;
 let chat_creation_time_diff_minutes = 180;
