@@ -1,4 +1,4 @@
-# Mail Bombing followed by Teams Chat Phishing Attack
+# Communication with Telegram API from suspicious process
 
 ## Description
 
