@@ -30,12 +30,6 @@ Telegram has constantly been the subject of abuse by multiple threat actors, fav
 | Command and Control | T1102 | [Web Service](https://attack.mitre.org/techniques/T1102/) |
 | Command and Control | T1071.001 | [Application Layer Protocol: Web Protocols](https://attack.mitre.org/techniques/T1071/001/) |
 
-## Author
-- Name: Stamatis Chatzimangou
-- Github: https://github.com/st0pp3r
-- X: [https://x.com/\_st0pp3r\_](https://x.com/_st0pp3r_)
-- LinkedIn: https://www.linkedin.com/in/stamatis-chatzimangou/
-
 ## Version History
 | Version | Date       | Comments                          |
 | ------- |------------| ----------------------------------|
