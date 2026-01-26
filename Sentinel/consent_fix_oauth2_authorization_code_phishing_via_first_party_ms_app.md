@@ -12,7 +12,7 @@ The query detects a successful interactive sign-in quickly followed by a non-int
 
 ## Query
 
-### <Sentinel/Defender for Endpoint>
+### Sentinel
 
 ```KQL
 let affected_application_ids = dynamic([
