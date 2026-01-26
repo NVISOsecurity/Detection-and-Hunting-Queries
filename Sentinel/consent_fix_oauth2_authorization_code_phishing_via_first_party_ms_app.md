@@ -1,8 +1,8 @@
-# ConsentFix - OAuth2 Authorization Code Phishing via First-party Microsoft Application
+# ConsentFix (a.k.a. AuthCodeFix) - OAuth2 Authorization Code Phishing via First-party Microsoft Application
 
 ## Description
 
-ConsentFix is a technique where the adversary tricks the victim into generating an OAuth authorization code that is part of a localhost URL, by signing in to the Azure CLI instance (or other vulnerable applications). Then, the victim is instructed to copy that URL and paste it into a phishing website, essentially handing over the authorization code to the adversary, who is now able to exchange it for an access token. Using the access token, the adversary gets access to the victim's Microsoft account.
+ConsentFix (a.k.a. AuthCodeFix) is a technique where the adversary tricks the victim into generating an OAuth authorization code that is part of a localhost URL, by signing in to the Azure CLI instance (or other vulnerable applications). Then, the victim is instructed to copy that URL and paste it into a phishing website, essentially handing over the authorization code to the adversary, who is now able to exchange it for an access token. Using the access token, the adversary gets access to the victim's Microsoft account.
 
 The query detects a successful interactive sign-in quickly followed by a non-interactive sign-in to the same Microsoft application from a different IP address and geographic location, which is the behavior you would normally expect from a successful execution of this attack. The query focuses on the affected Microsoft first-party applications (e.g., Azure CLI, Azure PowerShell, Visual Studio, VS Code). The query can be tuned to allowlist locations (countries), cities, or IP addresses and can also limit the comparison of the sign-ins to location (country) or city.
 
