@@ -1,4 +1,4 @@
-# Consent Fix - OAuth2 Authorization Code Phishing via First-party Microsoft Application
+# ConsentFix - OAuth2 Authorization Code Phishing via First-party Microsoft Application
 
 ## Description
 
