@@ -2,7 +2,7 @@
 
 ## Description
 
-Security researchers uncovered a large campaign involving 17 malicious browser extensions linked to GhostPoster, which were distributed through official browser extension stores (Chrome, Firefox, Edge) and collectively have been downloaded over 840,000 times. The threat actor used techniques like steganography in PNG icon files, delayed payload activation, and multi-stage delivery to evade detection by store review systems and static analysis tools. The query detects browser extensions that are part of the GhostPoster malware campaign.
+Security researchers have uncovered a large-scale campaign involving 17 malicious browser extensions associated with the GhostPoster threat actor. These extensions were distributed via official stores for Chrome, Firefox, and Edge, accumulating more than 840,000 installations. To evade store reviews and static analysis, the operators leveraged steganography within PNG icon files, delayed payload activation, and a multi-stage delivery chain. The following  queries identift browser extensions linked to the GhostPoster campaign.
 
 ## References
 

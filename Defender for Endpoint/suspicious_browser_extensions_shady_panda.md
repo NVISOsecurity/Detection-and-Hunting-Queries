@@ -2,7 +2,7 @@
 
 ## Description
 
-Detects the presence of browser extensions associated with the ShadyPanda campaign infecting 4.3 million users. Extensions presented themselves as productivity tools - new tab pages, translators, tab managers - while operating as comprehensive spyware. Additional research uncovered 100+ extensions connected to the same infrastructure, adding 1.3 million more victims.
+Detects the presence of browser extensions associated with the ShadyPanda campaign infecting 4.3 million users. Extensions presented themselves as productivity tools such as new tab pages, translators, or tab managers, while operating as spyware. Additional research uncovered additional extensions connected to the same infrastructure, adding 1.3 million more victims. The queries detects suspicious extensions related to the Shady Panda campaign.
 
 ## References
 

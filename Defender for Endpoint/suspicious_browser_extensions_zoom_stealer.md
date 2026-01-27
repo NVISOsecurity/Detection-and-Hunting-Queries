@@ -2,7 +2,7 @@
 
 ## Description
 
-Detects the presence of browser extensions associated with the zoom stealer campaign. The Zoom Stealer focuses on systematic collection of corporate meeting intelligence. 
+The following queries detect the presence of browser extensions associated with the zoom stealer campaign. The Zoom Stealer focuses on the collection of corporate meeting intelligence. 
 
 ## References
 
