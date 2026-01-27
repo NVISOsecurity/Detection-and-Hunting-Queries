@@ -1,4 +1,4 @@
-# Shady Panda Suspicious Broswer Extensions
+# Shady Panda Suspicious Browser Extensions
 
 ## Description
 

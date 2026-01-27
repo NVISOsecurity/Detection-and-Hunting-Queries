@@ -1,4 +1,4 @@
-# Urban VPN Suspicious Broswer Extensions
+# Urban VPN Suspicious Browser Extensions
 
 ## Description
 

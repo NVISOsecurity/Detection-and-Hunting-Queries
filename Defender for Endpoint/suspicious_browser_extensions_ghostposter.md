@@ -1,4 +1,4 @@
-# Ghostposter Suspicious Broswer Extensions
+# Ghostposter Suspicious Browser Extensions
 
 ## Description
 

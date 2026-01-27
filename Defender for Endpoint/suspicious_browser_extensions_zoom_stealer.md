@@ -1,4 +1,4 @@
-# Zoom Stealer Suspicious Broswer Extensions
+# Zoom Stealer Suspicious Browser Extensions
 
 ## Description
 
