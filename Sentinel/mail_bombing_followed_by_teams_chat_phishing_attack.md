@@ -94,4 +94,4 @@ EmailEvents
 ## Version History
 | Version | Date       | Comments                          |
 | ------- |------------| ----------------------------------|
-| 1.0     | 2025-01-16 | Initial publish                   |
+| 1.0     | 2025-01-16 | Initial query published           |
