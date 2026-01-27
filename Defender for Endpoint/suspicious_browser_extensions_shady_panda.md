@@ -8,7 +8,7 @@ Detects the presence of browser extensions associated with the ShadyPanda campai
 
 - https://www.koi.ai/blog/darkspectre-unmasking-the-threat-actor-behind-7-8-million-infected-browsers#heading-3
 
-## Query
+## Queries
 
 ### <Defender for Endpoint>
 

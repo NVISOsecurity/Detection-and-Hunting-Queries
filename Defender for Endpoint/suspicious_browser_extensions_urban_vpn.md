@@ -8,7 +8,7 @@ Detects the presence of Urban VPN browser extensions that inject scripts when us
 
 - https://www.koi.ai/blog/urban-vpn-browser-extension-ai-conversations-data-collection
 
-## Query
+## Queries
 
 ### <Defender for Endpoint>
 

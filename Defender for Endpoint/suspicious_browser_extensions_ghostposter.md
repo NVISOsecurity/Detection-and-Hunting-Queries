@@ -9,7 +9,7 @@ Security researchers uncovered a large campaign involving 17 malicious browser e
 - https://www.koi.ai/blog/inside-ghostposter-how-a-png-icon-infected-50-000-firefox-browser-users
 - https://layerxsecurity.com/blog/browser-extensions-gone-rogue-the-full-scope-of-the-ghostposter-campaign/
 
-## Query
+## Queries
 
 ### <Defender for Endpoint>
 
