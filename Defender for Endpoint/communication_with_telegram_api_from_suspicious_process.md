@@ -33,4 +33,4 @@ Telegram has constantly been the subject of abuse by multiple threat actors, fav
 ## Version History
 | Version | Date       | Comments                          |
 | ------- |------------| ----------------------------------|
-| 1.0     | 2025-01-16 | Initial publish                   |
+| 1.0     | 2025-01-26 | Initial publish                   |
