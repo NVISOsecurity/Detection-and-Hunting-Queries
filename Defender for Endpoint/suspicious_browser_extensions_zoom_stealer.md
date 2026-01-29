@@ -10,7 +10,7 @@ The following queries detect the presence of browser extensions associated with 
 
 ## Queries
 
-### <Defender for Endpoint>
+### Defender for Endpoint
 
 If you have Microsoft Defender Vulnerability Management run:
 
