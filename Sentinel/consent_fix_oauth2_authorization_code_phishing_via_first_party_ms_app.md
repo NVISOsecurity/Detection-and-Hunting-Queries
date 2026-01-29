@@ -9,6 +9,7 @@ The query detects a successful interactive sign-in quickly followed by a non-int
 ## References
 
 - https://pushsecurity.com/blog/consentfix
+- https://blog.nviso.eu/2026/01/29/consentfix-a-k-a-authcodefix-detecting-oauth2-authorization-code-phishing/
 
 ## Query
 
