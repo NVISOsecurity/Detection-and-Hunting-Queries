@@ -10,7 +10,7 @@ Detects the presence of Urban VPN browser extensions that inject scripts when us
 
 ## Queries
 
-### <Defender for Endpoint>
+### Defender for Endpoint
 
 If you have Microsoft Defender Vulnerability Management run:
 

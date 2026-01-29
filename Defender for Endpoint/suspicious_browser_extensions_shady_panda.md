@@ -10,7 +10,7 @@ Detects the presence of browser extensions associated with the ShadyPanda campai
 
 ## Queries
 
-### <Defender for Endpoint>
+### Defender for Endpoint
 
 If you have Microsoft Defender Vulnerability Management run:
 

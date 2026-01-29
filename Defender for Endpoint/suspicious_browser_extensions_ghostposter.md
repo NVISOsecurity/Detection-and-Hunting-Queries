@@ -11,7 +11,7 @@ Security researchers have uncovered a large-scale campaign involving 17 maliciou
 
 ## Queries
 
-### <Defender for Endpoint>
+### Defender for Endpoint
 
 If you have Microsoft Defender Vulnerability Management run:
 

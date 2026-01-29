@@ -21,10 +21,16 @@ let affected_application_ids = dynamic([
     "872cd9fa-d31f-45e0-9eab-6e460a02d1f1", // Visual Studio
     "aebc6443-996d-45c2-90f0-388ff96faa56", // Visual Studio Code
     "9bc3ab49-b65d-410a-85ad-de819febfddc", // Microsoft SharePoint Online Management Shell
-    "a672d62c-fc7b-4e81-a576-e60dc46e951d" // Microsoft Power Query for Excel
+    "a672d62c-fc7b-4e81-a576-e60dc46e951d", // Microsoft Power Query for Excel
+    "1fec8e78-bce4-4aaf-ab1b-5451cc387264", // Microsoft Teams
+    "57336123-6e14-4acc-8dcf-287b6088aa28", // Microsoft Whiteboard Client
+    "57fcbcfa-7cee-4eb1-8b25-12d2030b4ee0 ", //Microsoft Flow Mobile PROD-GCCH-CN
+    "60c8bde5-3167-4f92-8fdb-059f6176dc0f", // Enterprise Roaming and Backup
+    "90f610bf-206d-4950-b61d-37fa6fd1b224" // Aadrm Admin Powershell
     ]);
 let lookback= 30d;
-let sign_in_diff_seconds = 600;
+let sign_in_diff_max_seconds = 600; // max time between interactive and not interactive login
+let sign_in_diff_min_seconds = 10; // min time between interactive login and time that the victim takes to copy-paste the URL. If actions occurs within a few seconds it is probably automated.
 let compare_location = true;
 let compare_city = false;
 let non_interactive_locations_allowlist = dynamic([]);
@@ -35,7 +41,7 @@ SigninLogs
 | where AppId in (affected_application_ids)
 | where ResultType == 0
 | project
-    InteractiveSignInTime = TimeGenerated,
+    InteractiveSignInTime = CreatedDateTime, // really important to use CreatedDateTime NOT TimeGenerated
     UserPrincipalName,
     InteractiveSignInLocation = Location,
     InteractiveSignInCity = tostring(parse_json(LocationDetails).city),
@@ -43,6 +49,7 @@ SigninLogs
     InteractiveSignInUserAgent = UserAgent,
     InteractiveSignInResourceIdentity = ResourceIdentity,
     InteractiveSignInResourceDisplayName = ResourceDisplayName,
+    InteractiveSignInUniqueTokenIdentifier = UniqueTokenIdentifier,
     AppId,
     AppDisplayName,
     SessionId
@@ -51,7 +58,7 @@ SigninLogs
     | where AppId in (affected_application_ids)
     | where ResultType == 0
     | project
-        NonInteractiveSignInTime = TimeGenerated,
+        NonInteractiveSignInTime = CreatedDateTime,  // really important to use CreatedDateTime NOT TimeGenerated
         UserPrincipalName,
         NonInteractiveSignInLocation = Location,
         NonInteractiveSignInCity = tostring(parse_json(LocationDetails).city),
@@ -59,6 +66,7 @@ SigninLogs
         NonInteractiveSignInUserAgent = UserAgent,
         NonInteractiveSignInResourceIdentity = ResourceIdentity,
         NonInteractiveSignInResourceDisplayName = ResourceDisplayName,
+        NonInteractiveSignInUniqueTokenIdentifier = UniqueTokenIdentifier,
         AppId,
         AppDisplayName,
         SessionId
@@ -69,11 +77,10 @@ SigninLogs
 | where NonInteractiveSignInIP !in (non_interactive_ips_allowlist)
 | where NonInteractiveSignInTime > InteractiveSignInTime // Interactive sign in precedes the non-interactive sign in
 | extend TimeDiffSeconds = datetime_diff("second", NonInteractiveSignInTime, InteractiveSignInTime)
-| where TimeDiffSeconds <= sign_in_diff_seconds
-| where InteractiveSignInIP != NonInteractiveSignInIP
-| where
-    (compare_location and InteractiveSignInLocation != NonInteractiveSignInLocation and isnotempty(InteractiveSignInLocation) and isnotempty(NonInteractiveSignInLocation))
-    or (compare_city and InteractiveSignInCity != NonInteractiveSignInCity and isnotempty(InteractiveSignInCity) and isnotempty(NonInteractiveSignInCity))
+| where TimeDiffSeconds between (sign_in_diff_min_seconds .. sign_in_diff_max_seconds)
+| where InteractiveSignInIP != NonInteractiveSignInIP 
+| where iif(compare_location, InteractiveSignInLocation != NonInteractiveSignInLocation and isnotempty(InteractiveSignInLocation) and isnotempty(NonInteractiveSignInLocation), true) == true
+| where iif(compare_city, InteractiveSignInCity != NonInteractiveSignInCity and isnotempty(InteractiveSignInCity) and isnotempty(NonInteractiveSignInCity), true) == true
 | project
     InteractiveSignInTime,
     NonInteractiveSignInTime,
@@ -91,6 +98,8 @@ SigninLogs
     NonInteractiveSignInResourceIdentity,
     InteractiveSignInResourceDisplayName,
     NonInteractiveSignInResourceDisplayName,
+    InteractiveSignInUniqueTokenIdentifier,
+    NonInteractiveSignInUniqueTokenIdentifier,
     AppDisplayName,
     AppId
 ```
@@ -107,3 +116,4 @@ SigninLogs
 | Version | Date       | Comments                          |
 | ------- |------------| ----------------------------------|
 | 1.0     | 2025-01-15 | Initial query published           |
+| 1.1     | 2025-01-29 | Updated query                     |
