@@ -12,6 +12,8 @@ Detects the installation of a fake Clawdbot VS Code extension that installs scre
 
 ### Defender for Endpoint
 
+Checks process command line arguments and folder path file modifications that may occur during the installation of the vs code extension.
+
 ```KQL
 let suspicious_extension_identifiers = dynamic([
 clawdbot.clawdbot-agent
@@ -44,6 +46,8 @@ DeviceFileEvents
 )
 | where ExtIdentifier in (suspicious_extension_identifiers)
 ```
+
+Checks network indicators from the blog post.
 
 ```
 DeviceNetworkEvents

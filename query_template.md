@@ -41,5 +41,5 @@ DeviceEvents
 ## Version History
 | Version | Date       | Comments                          |
 | ------- |------------| ----------------------------------|
-| 1.0     | 2025-01-15 | Initial publish                   |
+| 1.0     | 2025-01-15 | Initial query published           |
 | 1.1     | 2025-01-16 | Changes to the query              |
