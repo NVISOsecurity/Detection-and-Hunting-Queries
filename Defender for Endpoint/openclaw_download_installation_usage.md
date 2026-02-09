@@ -40,4 +40,4 @@ DeviceProcessEvents
 ## Version History
 | Version | Date       | Comments                          |
 | ------- |------------| ----------------------------------|
-| 1.0     | 2025-01-15 | Initial query published           |p
+| 1.0     | 2025-01-15 | Initial queries published           |
