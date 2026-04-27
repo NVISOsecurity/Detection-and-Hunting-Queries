@@ -14,7 +14,7 @@ to identify suspicious or malicious content execution.
 
 ## Query
 
-### <Defender for Endpoint>
+### Defender for Endpoint
 
 ```KQL
 DeviceProcessEvents 
