@@ -2,7 +2,8 @@
 
 ## Description
 
-Detects the execution of the following commands within a 5-minute window: /sbin/modprobe -q -- net-pf-38, /sbin/modprobe -q -- algif-aead, /sbin/modprobe -q -- crypto-authencesn(hmac(sha256),cbc(aes), and a non-root Python process attempting to run su. When all four commands occur together this may indicate potential exploitation of opy Fail (CVE-2026-31431).
+Detects the execution of the following commands within a 5-minute window: ```/sbin/modprobe -q -- net-pf-38```, ```/sbin/modprobe -q -- algif-aead```, 
+```/sbin/modprobe -q -- crypto-authencesn(hmac(sha256),cbc(aes))```, and a non-root Python process attempting to run ```su```. When all four commands occur together this may indicate potential exploitation of opy Fail (CVE-2026-31431).
 
 ## References
 
