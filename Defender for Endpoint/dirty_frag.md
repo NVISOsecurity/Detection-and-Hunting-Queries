@@ -3,7 +3,7 @@
 ## Description
 
 Detects the execution of the following commands within a 5-minute window: ```/sbin/modprobe -q -- net-pf-16-proto-6```, ```/sbin/modprobe -q -- xfrm-type-2-50```, 
-```/sbin/modprobe -q -- crypto-echainiv(authencesn(hmac(sha256),cbc(aes))) ```. When all four commands occur together this may indicate potential exploitation of Dirty Frag.
+```/sbin/modprobe -q -- crypto-echainiv(authencesn(hmac(sha256),cbc(aes))) ```. When all three commands occur in a short window this may indicate potential exploitation of Dirty Frag.
 
 ## References
 
