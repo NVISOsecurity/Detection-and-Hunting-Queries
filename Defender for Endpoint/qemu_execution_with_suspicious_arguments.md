@@ -2,7 +2,7 @@
 
 ## Description
 
-Detects QEMU execution with stealth-oriented arguments such as very low memory allocation, disabled graphics output, and unrestricted user-mode networking.
+Detects QEMU execution with suspicious arguments like very low memory allocation, disabled graphics output, or unrestricted user-mode networking.
 
 ## References
 

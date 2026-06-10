@@ -2,7 +2,7 @@
 
 ## Description
 
-Detects QEMU execution with suspicious networking and tunneling arguments such as host/guest forwarding, listen/connect socket directives, and stream/dgram transport patterns.
+Detects QEMU execution with suspicious networking and tunneling arguments such as host/guest forwarding, listen/connect socket, and stream/dgram transport.
 
 ## References
 

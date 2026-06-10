@@ -2,7 +2,7 @@
 
 ## Description
 
-Detects QEMU-like execution based on distinctive virtualization command-line arguments, including scenarios where the QEMU binary has been renamed to evade simple name-based detections.
+Detects QEMU-like execution based on command-line arguments, to detect scenarios where the QEMU binary has been renamed to evade simple name-based detections.
 
 ## References
 

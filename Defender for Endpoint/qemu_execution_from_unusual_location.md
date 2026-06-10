@@ -2,7 +2,7 @@
 
 ## Description
 
-Detects QEMU execution from non-standard paths and uncommon parent processes, while filtering common legitimate emulator and virtualization tooling locations.
+Detects QEMU execution from non-standard paths and uncommon parent processes, filtering common legitimate emulator and tooling locations.
 
 ## References
 
