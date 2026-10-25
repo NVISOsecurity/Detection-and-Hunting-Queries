@@ -18,7 +18,7 @@ Download or Installation
 DeviceProcessEvents
 | where (FileName in ("node", "node.exe") and ProcessCommandLine contains " install " and ProcessCommandLine contains "openclaw@latest") or 
 (FileName in ("curl", "curl.exe") and ProcessCommandLine contains "https://openclaw.ai") or
-(FileName in ("git", "git.exe") and ProcessCommandLine contains "hhttps://github.com/openclaw/")
+(FileName in ("git", "git.exe") and ProcessCommandLine contains "https://github.com/openclaw/")
 ```
 
 Usage
